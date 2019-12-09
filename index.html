@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+
+
+    <title>jQueryプラグイン</title>
+</head>
+<body>
+  <div class="container">
+
+      <div>
+        <ul>
+          <h1>-MyCats-</h1>
+          <li>
+            <p>-写真をクリックするとフォントサイズが表示されます-<br>
+              -「WHAT YOUR NAME?」をクリックすると猫の名前が表示されます-
+            </p>
+          </li>
+        </ul>
+        <ul>
+          <h2>-click-</h2>
+        <li>
+          <p>-我が家のアイドルです-<br>
+            -My Sweet Pets-
+          </p>
+        </li>
+          <button type="button" name="button">
+            <p><img src="img/DSC_0536.jpg"></p>
+            <div id="cat1-button"><p id="text-a">WHAT YOUR NAME?</p></div>
+          </button>
+          <button type="button" name="button">
+            <p><img src="img/DSC_0401.jpg"></p>
+            <div id="cat2-button"><p id="text-b">WHAT YOUR NAME?</p></div>
+          </button>
+          <button type="button" name="button">
+            <p><img src="img/DSC_0434.jpg"></p>
+            <div id="cat3-button"><p id="text-c">WHAT YOUR NAME?</p></div>
+          </button>
+          <button type="button" name="button">
+            <p><img src="img/DSC_0469.jpg" data-size="30"></p>
+            <div id="cat4-button"><p id="text-d">WHAT YOUR NAME?</p></div>
+          </button>
+        </div>
+
+        </ul>
+
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+          <script src="jquery.showsize.js"></script>
+
+
+    <script>
+      $(function(){
+        $('img').showsize({
+        });
+      });
+
+{
+document.getElementById("cat1-button").onclick = function() {
+  document.getElementById("text-a").innerHTML = "ブッチボーイ-butti-";
+};
+}
+{
+      document.getElementById("cat2-button").onclick = function() {
+        document.getElementById("text-b").innerHTML = "トラジ-toraji-";
+      };
+}
+{
+      document.getElementById("cat3-button").onclick = function() {
+        document.getElementById("text-c").innerHTML = "ナツメ-natume-";
+      };
+}
+{
+      document.getElementById("cat4-button").onclick = function() {
+        document.getElementById("text-d").innerHTML = "ジジ-jiji-";
+      };
+}
+    </script>
+  </div>
+<!-- css -->
+<style media="screen">
+  h1 {
+    text-align: left;
+    font-size: 140px;
+  }
+
+  h2 {
+    text-align: left;
+    font-size: 100px;
+
+
+  }
+  li  {
+    list-style: none;
+    font-size;  20px;
+    margin-top: 7px;
+  }
+
+  p {
+    font-size: 40px;
+  }
+  /* .text-a .text-b .text-c .text-d {
+    font-size: 40px;
+    font-weight: bold;
+
+  } */
+</style>
+</body>
+
+</html>
